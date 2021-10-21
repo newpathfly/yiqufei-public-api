@@ -1,16 +1,20 @@
 package com.yiqufei.api.model;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import com.yiqufei.api.model.enums.ApplyType;
 import com.yiqufei.api.model.enums.Eligibility;
 import com.yiqufei.api.model.enums.InvoiceType;
 import com.yiqufei.api.model.enums.PriceType;
+import com.yiqufei.api.model.enums.ProductType;
 import com.yiqufei.api.model.enums.ReservationType;
 import com.yiqufei.api.model.enums.TaxType;
 
@@ -271,4 +275,39 @@ public class Routing {
      *  OT：from unknow GDS
      */
     ReservationType reservationType;
+
+    /**
+     * 1）PUB public fare: PUB
+     * 
+     * 2）PRV private fare: PRV
+     */
+    ProductType productType;
+
+    /**
+     * Fare basis devide in “;”each segment
+     */
+    String fareBasis;
+
+    /**
+     * From flight use the following Segment Element
+     * 
+     * Multi routes all output to this node
+     */
+    @NotEmpty
+    @Valid
+    List<Segment> fromSegments;
+
+    /**
+     * Segment Element return flight use the following Segment Element, one way
+     * search is blank
+     */
+    @Valid
+    List<Segment> retSegments;
+
+    /**
+     * Free baggage allowrance, exchange and return information use the following
+     * Rule Element
+     */
+    @Valid
+    Rule rule;
 }
