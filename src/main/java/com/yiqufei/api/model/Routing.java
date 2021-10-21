@@ -11,6 +11,7 @@ import com.yiqufei.api.model.enums.ApplyType;
 import com.yiqufei.api.model.enums.Eligibility;
 import com.yiqufei.api.model.enums.InvoiceType;
 import com.yiqufei.api.model.enums.PriceType;
+import com.yiqufei.api.model.enums.ReservationType;
 import com.yiqufei.api.model.enums.TaxType;
 
 import lombok.AllArgsConstructor;
@@ -201,7 +202,7 @@ public class Routing {
     /**
      * Minimum stay[daily]
      * 
-     * [no response, shows in 0, refer to flight change], 
+     * [no response, shows in 0, refer to flight change],
      */
     String minStay;
 
@@ -227,11 +228,47 @@ public class Routing {
     Integer maxPassengerCount;
 
     /**
-     * Booking office number 
+     * Booking office number
      * 
      * [could be blank]
      */
     String bookingOfficeNo;
 
-    
+    /**
+     * Ticketing office number
+     * 
+     * [could be blank]
+     */
+    String ticketingOfficeNo;
+
+    /**
+     * Valideating carrier
+     * 
+     * issuing airline
+     * 
+     * entire routes shows only one airline
+     */
+    @NotBlank
+    String validatingCarrier;
+
+    /**
+     * [Public fares must be assigned] reservation type
+     * 
+     * use IATA code
+     * 
+     *  1E：TravelSky
+     * 
+     *  1A：Amadeus
+     * 
+     *  1B：Abacus
+     * 
+     *  1S：Sabre
+     * 
+     *  1P：WorldSpan
+     * 
+     *  1G：Galileo
+     * 
+     *  OT：from unknow GDS
+     */
+    ReservationType reservationType;
 }
