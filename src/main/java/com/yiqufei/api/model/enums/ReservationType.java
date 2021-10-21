@@ -23,5 +23,5 @@ public enum ReservationType {
     GALILEO,
 
     @JsonProperty("OT")
-    UNKNOWN
+    UNKNOWN;
 }

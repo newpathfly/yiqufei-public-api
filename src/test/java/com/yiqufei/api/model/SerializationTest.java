@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yiqufei.api.model.enums.ApplyType;
 import com.yiqufei.api.model.enums.InvoiceType;
 import com.yiqufei.api.model.enums.PriceType;
-import com.yiqufei.api.model.enums.StatusType;
+import com.yiqufei.api.model.enums.Status;
 import com.yiqufei.api.model.enums.TaxType;
 import com.yiqufei.api.model.enums.TripType;
 import com.yiqufei.api.utils.ModelValidator;
@@ -96,7 +96,7 @@ class SerializationTest {
 
         return Search.Response.builder() //
                 .routing(routing) //
-                .status(StatusType.SUCCESS) //
+                .status(Status.SUCCESS) //
                 .build();
     }
 

@@ -8,5 +8,5 @@ public enum ProductType {
     PUBLIC_FARE,
 
     @JsonProperty("PRV")
-    PRIVATE_FARE
+    PRIVATE_FARE;
 }

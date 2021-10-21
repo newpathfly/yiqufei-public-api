@@ -20,5 +20,5 @@ public enum Eligibility {
     STUDENT,
 
     @JsonProperty("YOU")
-    YOUTH
+    YOUTH;
 }

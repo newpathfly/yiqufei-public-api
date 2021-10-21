@@ -10,7 +10,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
-import com.yiqufei.api.model.enums.StatusType;
+import com.yiqufei.api.model.enums.Status;
 import com.yiqufei.api.model.enums.TripType;
 
 import lombok.AllArgsConstructor;
@@ -111,7 +111,7 @@ public class Search {
          * 
          */
         @NotNull
-        StatusType status;
+        Status status;
 
         /**
          * Prompt information

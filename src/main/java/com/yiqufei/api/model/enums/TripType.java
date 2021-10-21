@@ -7,5 +7,5 @@ public enum TripType {
     OW,
 
     @JsonProperty("2")
-    RT
+    RT;
 }

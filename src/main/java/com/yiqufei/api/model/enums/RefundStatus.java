@@ -2,14 +2,17 @@ package com.yiqufei.api.model.enums;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public enum InvoiceType {
-    
+public enum RefundStatus {
+
     @JsonProperty("T")
-    INITERARY,
+    UNREFUNDABLE,
+
+    @JsonProperty("H")
+    CONDITIONAL_REFUND,
 
     @JsonProperty("F")
-    INVOICE,
+    FREE_REFUND,
 
     @JsonProperty("E")
-    E_INVOICE;
+    BY_THE_RULES_OF_AIRLINES;
 }

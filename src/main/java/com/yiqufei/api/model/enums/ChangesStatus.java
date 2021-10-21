@@ -2,14 +2,17 @@ package com.yiqufei.api.model.enums;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public enum InvoiceType {
+public enum ChangesStatus {
     
     @JsonProperty("T")
-    INITERARY,
+    UNCHANGEABLE,
+
+    @JsonProperty("H")
+    CONDITIONAL_CHANGE,
 
     @JsonProperty("F")
-    INVOICE,
+    FREE_CHANGE,
 
     @JsonProperty("E")
-    E_INVOICE;
+    BY_THE_RULES_OF_AIRLINES;
 }

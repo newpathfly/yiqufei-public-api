@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * [Return successful when request result with no actual routes on searching
  * date]
  */
-public enum StatusType {
+public enum Status {
 
     SUCCESS(0),
 
@@ -18,7 +18,7 @@ public enum StatusType {
 
     private final int _status;
 
-    private StatusType(int status) {
+    private Status(int status) {
         _status = status;
     }
 

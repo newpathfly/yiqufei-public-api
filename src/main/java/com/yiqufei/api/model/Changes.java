@@ -1,5 +1,6 @@
 package com.yiqufei.api.model;
 
+import com.yiqufei.api.model.enums.ChangesStatus;
 import com.yiqufei.api.model.enums.ChangesType;
 
 import jakarta.validation.constraints.NotNull;
@@ -31,6 +32,20 @@ public class Changes {
      */
     @NotNull
     ChangesType changesType;
+
+    /**
+     * ChangesStatus
+     * 
+     * T=unchangeable
+     * 
+     * H=conditional change
+     * 
+     * F=free change
+     * 
+     * E=by the rules of airlines[public fares only]
+     */
+    @NotNull
+    ChangesStatus changeStatus;
 
     // @todo - continue
 }
