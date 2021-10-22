@@ -2,10 +2,10 @@ package com.yiqufei.api.model;
 
 import com.yiqufei.api.model.enums.PassengerType;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -55,7 +55,7 @@ public class FormatBaggage {
      * ＞0=means ‘PIECE CONCEPT’, the baggageWeight means weight of each piece of
      * baggage(at this time the baggageWeight could be blank, but not recommended)
      */
-    @Size(min = -1)
+    @Min(-1)
     Integer baggagePiece;
 
     /**

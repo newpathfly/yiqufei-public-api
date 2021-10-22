@@ -1,5 +1,7 @@
 package com.yiqufei.api.model;
 
+import com.yiqufei.api.model.enums.CabinGrade;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -85,12 +87,61 @@ public class Segment {
      */
     String stopAirports;
 
-
     /**
      * Code share (true for code share/ false for none code share)
      */
     @NotNull
     Boolean codeShare;
 
-    // @todo - continue
+    /**
+     * Operating carrier
+     * 
+     * If codeshare=true, the operatingCarrie must not be blank
+     */
+    @Size(min = 2, max = 2)
+    String operatingCarrier;
+
+    /**
+     * OperatingFlightNo
+     */
+    @Size(min = 3)
+    String operatingFlightNo;
+
+    /**
+     * Cabin
+     */
+    @NotBlank
+    @Size(min = 1, max = 1)
+    String cabin;
+
+    /**
+     * Cabin grade
+     * 
+     * F=first class;
+     * 
+     * C= commercial class;
+     * 
+     * S= super economy class;
+     * 
+     * Y=economy [Currently only supported to return Y]
+     */
+    CabinGrade cabinGrade;
+
+    /**
+     * AircraftCode’s IATA code，and filter the following aircraftCode information
+     * 
+     * BUS|ICE|LCH|LMO|MTL|RFS|TGV|THS|THT|TRN|TSL|
+     */
+    @Size(min = 3, max = 3)
+    String aircraftCode;
+
+    /**
+     * Duration; unit: minutes, result of after the time difference conversion.
+     * 
+     * Subject to actual duration time
+     */
+    String duration;
+
+    // @todo known field
+    Integer cabinCount;
 }

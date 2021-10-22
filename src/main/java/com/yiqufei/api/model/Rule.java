@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.Singular;
 
 @Builder
 @Getter
@@ -25,6 +26,7 @@ public class Rule {
      * could not miss any of it
      */
     @Valid
+    @Singular("formatBaggageInfo")
     List<FormatBaggage> formatBaggageInfoList; // @todo - is this mandatory or not?
 
     /**
@@ -35,12 +37,14 @@ public class Rule {
      * 2）need to be return by passenger type
      */
     @Valid
+    @Singular("refundInfo")
     List<Refund> refundInfoList; // @todo - is this mandatory or not?
 
     /**
      * Change rules Changes Element
      */
     @Valid
+    @Singular("changesInfo")
     List<Changes> changesInfoList; // @todo - is this mandatory or not?
 
     /**
@@ -49,7 +53,8 @@ public class Rule {
     String note;
 
     /**
-     * Public fare related parameters, geographic interval see the freight cluster code
+     * Public fare related parameters, geographic interval see the freight cluster
+     * code
      */
     String tariffNo;
 
@@ -57,4 +62,10 @@ public class Rule {
      * Public fare related parameters
      */
     String ruleNo;
+
+    // @todo known field
+    Integer fareRuleMatchMode;
+
+    // @todo known field
+    Boolean isUseCtripRule;
 }

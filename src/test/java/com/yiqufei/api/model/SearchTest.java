@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.io.InputStream;
 import java.math.BigDecimal;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,7 +20,7 @@ import org.junit.jupiter.api.Test;
 
 import lombok.SneakyThrows;
 
-class SerializationTest {
+class SearchTest {
 
     private final static ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
@@ -62,19 +63,6 @@ class SerializationTest {
         assertEquals(expectedRequest.retDate, actualRequest.retDate);
     }
 
-    private static Search.Request buildSearchRequest() {
-        return Search.Request.builder() //
-                .cid("wtf") //
-                .tripType(TripType.RT) //
-                .fromCity("PEK") //
-                .toCity("YYZ") //
-                .adultNumber(2) //
-                .childNumber(2) //
-                .fromDate("20220202") //
-                .retDate("20220228") //
-                .build();
-    }
-
     @Test
     @SneakyThrows
     void positiveTest_SearchResponse() {
@@ -90,6 +78,37 @@ class SerializationTest {
         assertNotNull(actualResponse);
     }
 
+    @Test
+    @SneakyThrows
+    void positiveTest_SearchResponse_SampleJson() {
+
+        for (String samplePath : new String[] { //
+                "/samples/SearchResponse_OW1.json", //
+                "/samples/SearchResponse_OW2.json", //
+                "/samples/SearchResponse_RT.json" //
+        }) {
+            Search.Response response = null;
+
+            try (InputStream stream = getClass().getResourceAsStream(samplePath)) {
+                response = OBJECT_MAPPER.readValue(stream, Search.Response.class);
+            }
+
+            BASIC_REQUEST_VALIDATOR.validate(response);
+        }
+    }
+
+    private static Search.Request buildSearchRequest() {
+        return Search.Request.builder() //
+                .cid("???") //
+                .tripType(TripType.OW) //
+                .fromCity("PEK") //
+                .toCity("YYZ") //
+                .adultNumber(2) //
+                .childNumber(2) //
+                .fromDate("20220202") //
+                .build();
+    }
+
     private static Search.Response buildSearchResponse() {
 
         Routing routing = buildRouting();
@@ -101,17 +120,36 @@ class SerializationTest {
     }
 
     private static Routing buildRouting() {
+
+        Segment fromSegment = buildSegment();
+
         return Routing.builder() //
-                .applyType(ApplyType.PRESET_PRICE) //
                 .adultPrice(BigDecimal.valueOf(123.45)) //
                 .adultTax(BigDecimal.valueOf(12.34)) //
                 .adultTaxType(TaxType.INCLUDING_TAX) //
+                .applyType(ApplyType.PRESET_PRICE) //
                 .childPrice(BigDecimal.valueOf(123.45)) //
                 .childTax(BigDecimal.valueOf(12.34)) //
                 .childTaxType(TaxType.INCLUDING_TAX) //
-                .data("wtf") //
+                .data("???") //
                 .invoiceType(InvoiceType.E_INVOICE) //
                 .priceType(PriceType.NORMAL_PRICE) //
+                .validatingCarrier("ABC") //
+                .fromSegment(fromSegment) //
+                .build();
+    }
+
+    private static Segment buildSegment() {
+
+        return Segment.builder() //
+                .arrAirport("YYZ") //
+                .cabin("H") //
+                .carrier("AC") //
+                .codeShare(false) //
+                .depAirport("PEK") //
+                .depTime("202203100300") //
+                .arrTime("202303100300") //
+                .flightNumber("AC123") //
                 .build();
     }
 }

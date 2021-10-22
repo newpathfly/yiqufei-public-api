@@ -23,6 +23,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.Singular;
 
 @Builder
 @Getter
@@ -58,6 +59,10 @@ public class Routing {
     @Positive
     BigDecimal adultTax;
 
+    // @todo known field
+    @Positive
+    BigDecimal adultTotal;
+
     /**
      * Public fare for child, excluding tax
      */
@@ -82,6 +87,10 @@ public class Routing {
     @Positive
     BigDecimal childTax;
 
+    // @todo known field
+    @Positive
+    BigDecimal childTotal;
+
     /**
      * Public fare for infant[ not available]
      */
@@ -99,6 +108,10 @@ public class Routing {
      */
     @PositiveOrZero
     BigDecimal infantTax;
+
+    // @todo known field
+    @Positive
+    BigDecimal infantTotal;
 
     /**
      * Adult’s tax type:
@@ -295,6 +308,7 @@ public class Routing {
      */
     @NotEmpty
     @Valid
+    @Singular
     List<Segment> fromSegments;
 
     /**
@@ -302,6 +316,7 @@ public class Routing {
      * search is blank
      */
     @Valid
+    @Singular
     List<Segment> retSegments;
 
     /**
@@ -310,4 +325,10 @@ public class Routing {
      */
     @Valid
     Rule rule;
+
+    // @todo known field
+    String fromConnectionTime;
+
+    // @todo known field
+    String returnConnectionTime;
 }

@@ -51,7 +51,7 @@ public class Changes {
      * E=by the rules of airlines[public fares only]
      */
     @NotNull
-    ChangesStatus changeStatus;
+    ChangesStatus changesStatus;
 
     /**
      * ChangesFee
@@ -79,7 +79,7 @@ public class Changes {
     @NotNull
     PassengerType passengerType;
 
-    // @todo figure out what type is this
+    // @todo known field
     @NotBlank
     String revNoshow;
 
