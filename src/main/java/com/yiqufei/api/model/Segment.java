@@ -142,6 +142,6 @@ public class Segment {
      */
     String duration;
 
-    // @todo known field
+    // @todo unknown field
     Integer cabinCount;
 }

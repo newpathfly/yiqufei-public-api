@@ -63,9 +63,9 @@ public class Rule {
      */
     String ruleNo;
 
-    // @todo known field
+    // @todo unknown field
     Integer fareRuleMatchMode;
 
-    // @todo known field
+    // @todo unknown field
     Boolean isUseCtripRule;
 }

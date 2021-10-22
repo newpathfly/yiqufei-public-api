@@ -59,7 +59,7 @@ public class Routing {
     @Positive
     BigDecimal adultTax;
 
-    // @todo known field
+    // @todo unknown field
     @Positive
     BigDecimal adultTotal;
 
@@ -87,7 +87,7 @@ public class Routing {
     @Positive
     BigDecimal childTax;
 
-    // @todo known field
+    // @todo unknown field
     @Positive
     BigDecimal childTotal;
 
@@ -109,7 +109,7 @@ public class Routing {
     @PositiveOrZero
     BigDecimal infantTax;
 
-    // @todo known field
+    // @todo unknown field
     @Positive
     BigDecimal infantTotal;
 
@@ -326,9 +326,9 @@ public class Routing {
     @Valid
     Rule rule;
 
-    // @todo known field
+    // @todo unknown field
     String fromConnectionTime;
 
-    // @todo known field
+    // @todo unknown field
     String returnConnectionTime;
 }

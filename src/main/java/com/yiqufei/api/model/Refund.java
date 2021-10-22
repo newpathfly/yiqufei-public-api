@@ -74,7 +74,7 @@ public class Refund {
     @NotNull
     PassengerType passengerType;
 
-    // @todo known field
+    // @todo unknown field
     @NotBlank
     String refNoshow;
 
