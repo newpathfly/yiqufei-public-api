@@ -1,0 +1,153 @@
+{
+  "status": 0,
+  "msg": "success",
+  "routings": [
+    {
+      "data": "E_10140416_1E1021C7EDDFDD0C_1",
+      "publishPrice": 863.73,
+      "adultPrice": 863.73,
+      "adultTax": 78.14,
+      "adultTotal": 941.87,
+      "childPublishPrice": 863.73,
+      "childPrice": 863.73,
+      "childTax": 78.14,
+      "childTotal": 941.87,
+      "adultAgeRestriction": "",
+      "eligibility": "NOR",
+      "forbiddenNationality": "",
+      "planCategory": 1,
+      "invoiceType": "E",
+      "priceType": 0,
+      "applyType": 0,
+      "adultTaxType": 0,
+      "childTaxType": 0,
+      "reservationType": "1S",
+      "productType": "PUB",
+      "bookingOfficeNo": "",
+      "ticketingOfficeNo": "",
+      "minStay": "0",
+      "maxStay": "0",
+      "validatingCarrier": "CX",
+      "maxPassengerCount": 9,
+      "minPassengerCount": 1,
+      "fareBasis": "HRZZLJHR;HRZZLJHR",
+      "fromConnectionTime": "0",
+      "returnConnectionTime": "0",
+      "rule": {
+        "formatBaggageInfoList": [
+          {
+            "passengerType": 0,
+            "baggagePiece": -1,
+            "baggageWeight": 30,
+            "cnBaggage": "30KG",
+            "enBaggage": "30KG",
+            "segmentNo": 1
+          },
+          {
+            "passengerType": 0,
+            "baggagePiece": -1,
+            "baggageWeight": 30,
+            "cnBaggage": "30KG",
+            "enBaggage": "30KG",
+            "segmentNo": 2
+          }
+        ],
+        "refundInfoList": [
+          {
+            "passengerType": 0,
+            "refundType": 0,
+            "refundStatus": "H",
+            "refundFee": 863.58,
+            "currency": "USD",
+            "refNoshow": "0.00",
+            "refNoShowCondition": 72,
+            "refNoshowFee": 0,
+            "cnRefRemark": "",
+            "enRefRemark": ""
+          },
+          {
+            "passengerType": 0,
+            "refundType": 1,
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "USD",
+            "refNoshow": "0.00",
+            "refNoShowCondition": 72,
+            "refNoshowFee": 0,
+            "cnRefRemark": "",
+            "enRefRemark": ""
+          }
+        ],
+        "changesInfoList": [
+          {
+            "passengerType": 0,
+            "changesType": 0,
+            "changesStatus": "H",
+            "changesFee": 863.58,
+            "currency": "USD",
+            "revNoshow": "0.00",
+            "revNoShowCondition": 72,
+            "revNoshowFee": 0,
+            "cnRevRemark": "",
+            "enRevRemark": ""
+          },
+          {
+            "passengerType": 0,
+            "changesType": 1,
+            "changesStatus": "T",
+            "changesFee": 0,
+            "currency": "USD",
+            "revNoshow": "0.00",
+            "revNoShowCondition": 72,
+            "revNoshowFee": 0,
+            "cnRevRemark": "",
+            "enRevRemark": ""
+          }
+        ],
+        "note": "",
+        "fareRuleMatchMode": 1,
+        "isUseCtripRule": false,
+        "tariffNo": "PUB",
+        "ruleNo": ""
+      },
+      "fromSegments": [
+        {
+          "carrier": "CX",
+          "depAirport": "PEK",
+          "arrAirport": "HKG",
+          "depTime": "202111291200",
+          "arrTime": "202111291620",
+          "stopAirports": "",
+          "cabin": "H",
+          "cabinCount": 9,
+          "aircraftCode": "333",
+          "flightNumber": "CX335",
+          "codeShare": false,
+          "depTerminal": "2",
+          "arrTerminal": "1",
+          "cabinGrade": "Y",
+          "duration": "260"
+        }
+      ],
+      "retSegments": [
+        {
+          "carrier": "CX",
+          "depAirport": "HKG",
+          "arrAirport": "PEK",
+          "depTime": "202112310900",
+          "arrTime": "202112311230",
+          "stopAirports": "",
+          "cabin": "H",
+          "cabinCount": 9,
+          "aircraftCode": "77W",
+          "flightNumber": "CX386",
+          "codeShare": false,
+          "depTerminal": "1",
+          "arrTerminal": "2",
+          "cabinGrade": "Y",
+          "duration": "210"
+        }
+      ]
+    }
+  ]
+}
