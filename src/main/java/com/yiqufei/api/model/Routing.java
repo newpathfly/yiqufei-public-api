@@ -332,9 +332,13 @@ public class Routing {
     @Valid
     Rule rule;
 
-    // @todo unknown field
+    /**
+     * internal use
+     */
     String fromConnectionTime;
 
-    // @todo unknown field
+    /**
+     * internal use
+     */
     String returnConnectionTime;
 }

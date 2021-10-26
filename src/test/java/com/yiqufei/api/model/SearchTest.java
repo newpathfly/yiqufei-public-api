@@ -83,8 +83,7 @@ class SearchTest {
     void positiveTest_SearchResponse_SampleJson() {
 
         for (String samplePath : new String[] { //
-                "/samples/SearchResponse_OW1.json", //
-                "/samples/SearchResponse_OW2.json", //
+                "/samples/SearchResponse_OW.json", //
                 "/samples/SearchResponse_RT.json" //
         }) {
             Search.Response response = null;

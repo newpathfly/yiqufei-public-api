@@ -6,7 +6,6 @@ import com.yiqufei.api.model.enums.ChangesStatus;
 import com.yiqufei.api.model.enums.ChangesType;
 import com.yiqufei.api.model.enums.PassengerType;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
@@ -79,9 +78,19 @@ public class Changes {
     @NotNull
     PassengerType passengerType;
 
-    // @todo unknown field
-    @NotBlank
-    String revNoshow;
+    /**
+     * Wether or not allow Noshow to revert
+     * 
+     * T=unchangeable
+     * 
+     * H=conditional change
+     * 
+     * F=free change
+     * 
+     * E=by the rules of airlines[public fares only]
+     */
+    @NotNull
+    ChangesStatus revNoshow;
 
     /**
      * When apply for change, how long before departure will be seen as NoShow?
