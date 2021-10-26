@@ -6,7 +6,6 @@ import com.yiqufei.api.model.enums.PassengerType;
 import com.yiqufei.api.model.enums.RefundStatus;
 import com.yiqufei.api.model.enums.RefundType;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
@@ -74,9 +73,16 @@ public class Refund {
     @NotNull
     PassengerType passengerType;
 
-    // @todo unknown field
-    @NotBlank
-    String refNoshow;
+    /**
+     * 1） For multi-passenger type request and verify, must be returned by the type
+     * of all passengers; e.g. adult+child's request, must return both of the
+     * allowance of exchange/refund.
+     * 
+     * 2）T=unrefundable; H= conditional refund; F=free refund; E=by the rules of
+     * airlines[public fares only]
+     */
+    @NotNull
+    RefundStatus refNoshow;
 
     /**
      * When apply for refund, how long before departure will be seen as NoShow?

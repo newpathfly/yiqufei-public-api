@@ -3,15 +3,15 @@
   "msg": "success",
   "routings": [
     {
-      "data": "E_10140416_1E1021C7EDDFDD0C_1",
-      "publishPrice": 863.73,
-      "adultPrice": 863.73,
-      "adultTax": 78.14,
-      "adultTotal": 941.87,
-      "childPublishPrice": 863.73,
-      "childPrice": 863.73,
-      "childTax": 78.14,
-      "childTotal": 941.87,
+      "data": "E_10261104_E514DB951413D663_1",
+      "publishPrice": 517.76,
+      "adultPrice": 517.76,
+      "adultTax": 29.09,
+      "adultTotal": 546.85,
+      "childPublishPrice": 517.76,
+      "childPrice": 517.76,
+      "childTax": 29.09,
+      "childTotal": 546.85,
       "adultAgeRestriction": "",
       "eligibility": "NOR",
       "forbiddenNationality": "",
@@ -30,7 +30,7 @@
       "validatingCarrier": "CX",
       "maxPassengerCount": 9,
       "minPassengerCount": 1,
-      "fareBasis": "HRZZLJHR;HRZZLJHR",
+      "fareBasis": "KRZZLJHO",
       "fromConnectionTime": "0",
       "returnConnectionTime": "0",
       "rule": {
@@ -42,14 +42,6 @@
             "cnBaggage": "30KG",
             "enBaggage": "30KG",
             "segmentNo": 1
-          },
-          {
-            "passengerType": 0,
-            "baggagePiece": -1,
-            "baggageWeight": 30,
-            "cnBaggage": "30KG",
-            "enBaggage": "30KG",
-            "segmentNo": 2
           }
         ],
         "refundInfoList": [
@@ -57,21 +49,9 @@
             "passengerType": 0,
             "refundType": 0,
             "refundStatus": "H",
-            "refundFee": 863.58,
+            "refundFee": 517.61,
             "currency": "USD",
-            "refNoshow": "0.00",
-            "refNoShowCondition": 72,
-            "refNoshowFee": 0,
-            "cnRefRemark": "",
-            "enRefRemark": ""
-          },
-          {
-            "passengerType": 0,
-            "refundType": 1,
-            "refundStatus": "T",
-            "refundFee": 0,
-            "currency": "USD",
-            "refNoshow": "0.00",
+            "refNoshow": "T",
             "refNoShowCondition": 72,
             "refNoshowFee": 0,
             "cnRefRemark": "",
@@ -83,21 +63,9 @@
             "passengerType": 0,
             "changesType": 0,
             "changesStatus": "H",
-            "changesFee": 863.58,
+            "changesFee": 517.61,
             "currency": "USD",
-            "revNoshow": "0.00",
-            "revNoShowCondition": 72,
-            "revNoshowFee": 0,
-            "cnRevRemark": "",
-            "enRevRemark": ""
-          },
-          {
-            "passengerType": 0,
-            "changesType": 1,
-            "changesStatus": "T",
-            "changesFee": 0,
-            "currency": "USD",
-            "revNoshow": "0.00",
+            "revNoshow": "T",
             "revNoShowCondition": 72,
             "revNoshowFee": 0,
             "cnRevRemark": "",
@@ -118,7 +86,7 @@
           "depTime": "202111291200",
           "arrTime": "202111291620",
           "stopAirports": "",
-          "cabin": "H",
+          "cabin": "K",
           "cabinCount": 9,
           "aircraftCode": "333",
           "flightNumber": "CX335",
@@ -129,25 +97,7 @@
           "duration": "260"
         }
       ],
-      "retSegments": [
-        {
-          "carrier": "CX",
-          "depAirport": "HKG",
-          "arrAirport": "PEK",
-          "depTime": "202112310900",
-          "arrTime": "202112311230",
-          "stopAirports": "",
-          "cabin": "H",
-          "cabinCount": 9,
-          "aircraftCode": "77W",
-          "flightNumber": "CX386",
-          "codeShare": false,
-          "depTerminal": "1",
-          "arrTerminal": "2",
-          "cabinGrade": "Y",
-          "duration": "210"
-        }
-      ]
+      "retSegments": []
     }
   ]
 }
