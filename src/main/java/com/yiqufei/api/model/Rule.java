@@ -3,6 +3,7 @@ package com.yiqufei.api.model;
 import java.util.List;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,9 +26,10 @@ public class Rule {
      * 1）when verify, baggage and format baggage needs to return in the same time,
      * could not miss any of it
      */
+    @NotEmpty
     @Valid
     @Singular("formatBaggageInfo")
-    List<FormatBaggage> formatBaggageInfoList; // @todo - is this mandatory or not?
+    List<FormatBaggage> formatBaggageInfoList;
 
     /**
      * Refund rules information list, use the following Refund Element
@@ -36,16 +38,18 @@ public class Rule {
      * 
      * 2）need to be return by passenger type
      */
+    @NotEmpty
     @Valid
     @Singular("refundInfo")
-    List<Refund> refundInfoList; // @todo - is this mandatory or not?
+    List<Refund> refundInfoList;
 
     /**
      * Change rules Changes Element
      */
+    @NotEmpty
     @Valid
     @Singular("changesInfo")
-    List<Changes> changesInfoList; // @todo - is this mandatory or not?
+    List<Changes> changesInfoList;
 
     /**
      * Note information
@@ -63,9 +67,13 @@ public class Rule {
      */
     String ruleNo;
 
-    // @todo unknown field
+    /**
+     * internal use
+     */
     Integer fareRuleMatchMode;
 
-    // @todo unknown field
+    /**
+     * internal use
+     */
     Boolean isUseCtripRule;
 }

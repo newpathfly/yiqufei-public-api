@@ -50,6 +50,10 @@ public class ModelValidator {
     }
 
     private static void validateDate(String date) {
+        if (null == date) {
+            throw new IllegalArgumentException("date should not be null.");
+        }
+
         LocalDate fromDate;
         try {
             fromDate = LocalDate.parse(date, DATE_FORMATTER);

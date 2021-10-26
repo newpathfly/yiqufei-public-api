@@ -59,7 +59,9 @@ public class Routing {
     @Positive
     BigDecimal adultTax;
 
-    // @todo unknown field
+    /**
+     * adultTotal = adultPrice + adultTax
+     */
     @Positive
     BigDecimal adultTotal;
 
@@ -87,7 +89,9 @@ public class Routing {
     @Positive
     BigDecimal childTax;
 
-    // @todo unknown field
+    /**
+     * childTotal = childPrice + childTax
+     */
     @Positive
     BigDecimal childTotal;
 
@@ -109,7 +113,9 @@ public class Routing {
     @PositiveOrZero
     BigDecimal infantTax;
 
-    // @todo unknown field
+    /**
+     * infantTotal = infantPrice + infantTax
+     */
     @Positive
     BigDecimal infantTotal;
 
