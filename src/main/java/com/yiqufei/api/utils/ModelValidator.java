@@ -9,9 +9,9 @@ import java.util.Set;
 import com.yiqufei.api.model.Search;
 import com.yiqufei.api.model.enums.TripType;
 
-import jakarta.validation.ConstraintViolation;
-import jakarta.validation.Validation;
-import jakarta.validation.Validator;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
 
 public class ModelValidator {
 
