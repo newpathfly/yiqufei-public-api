@@ -1,11 +1,12 @@
 package com.yiqufei.api.model;
 
-import com.yiqufei.api.model.enums.CabinGrade;
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PositiveOrZero;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
+
+import com.yiqufei.api.model.enums.CabinGrade;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -146,6 +147,6 @@ public class Segment {
     /**
      * seat count of the associated cabin
      */
-    @PositiveOrZero
+    @Positive
     Integer cabinCount;
 }
