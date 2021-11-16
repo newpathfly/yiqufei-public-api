@@ -6,6 +6,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
+import javax.validation.constraints.Size;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -38,6 +39,12 @@ public class Routing {
      */
     @NotBlank
     String data;
+
+    /**
+     * Currency of price
+     */
+    @Size(min = 3, max = 3)
+    String currency;
 
     /**
      * [Public fares must be assigned] Public fare for Adult, excluding tax
