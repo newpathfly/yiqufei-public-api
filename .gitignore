@@ -33,6 +33,3 @@ build/
 ### VS Code ###
 .vscode/
 **/.mvn/
-
-### k8s ###
-secret.yaml
